@@ -9,7 +9,7 @@ from product.views import (
     ShopListReviewView,
     ShopDetailReviewView,
 )
-
+from users.views import (RegistrationAPIView,ConfrimationAPIView,AuthorizationAPIView)
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
 
@@ -60,4 +60,12 @@ urlpatterns = [
     # reviews
     path('api/v1/reviews/', ShopListReviewView.as_view()),
     path('api/v1/reviews/<int:id>/', ShopDetailReviewView.as_view()),
+
+
+    path('registration/',RegistrationAPIView.as_view()),
+    path('authorization/',AuthorizationAPIView.as_view()),
+    path('confirm/',ConfrimationAPIView.as_view())
+
+
+
 ]
