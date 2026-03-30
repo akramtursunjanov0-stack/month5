@@ -20,3 +20,4 @@ services:
       - "shop_data:/var/lib/postgresql/data"
 volumes:
   shop_data:
+  
